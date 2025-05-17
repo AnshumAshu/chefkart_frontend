@@ -15,6 +15,8 @@ import Invester from "./Components/InvestorRelation/Invester";
 import Career from "./Components/Career/career";
 import Blog from "./Components/Blog/Blog";
 import ChefRegistration from "./Components/ChefRegistration/ChefRegistration";
+import ChefDetails from "./Components/ChefSearch"
+import ChefDirectory from "./Components/ChefDetailPage"
 
 
 
@@ -37,7 +39,8 @@ const App = () => {
         <Route path="/career" element={<Career />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/register-chef" element={<ChefRegistration />} />
-        {/* <Route path="/chef-search" element={<ChefSearch />} /> */}
+        <Route path="/chef-search" element={< ChefDetails/>} /> 
+        <Route path="/" element={< ChefDirectory/>} /> 
       </Routes>
       <Footer />
     </>

@@ -39,7 +39,7 @@ const Navbar = () => {
               <div className="absolute mt-2 w-60 bg-white text-black shadow-lg rounded-md z-10">
                 <Link
                   to="/cook-for-month"
-                  className="px-4 py-2 block text-lg font-bold hover:text-orange-500"
+                  className="px-4 py-2 flex items-center justify-between text-1xl font-bold hover:text-orange-500"
                 >
                   Cook for a Month
                   <FaChevronRight className="ml-2" />
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <hr />
                 <Link
                   to="/one-time-cook"
-                  className="px-4 py-2 block text-lg font-bold hover:text-orange-500"
+                  className="px-4 py-2 flex items-center justify-between text-1xl font-bold hover:text-orange-500"
                 >
                   Chiefit: One Time Cook
                   <FaChevronRight className="ml-2" />
@@ -55,7 +55,7 @@ const Navbar = () => {
                 <hr />
                 <Link
                   to="/chef-for-party"
-                  className="px-4 py-2 block text-lg font-bold hover:text-orange-500"
+                  className="px-4 py-2 flex items-center justify-between text-1xl font-bold hover:text-orange-500"
                 >
                   Chef for Party
                   <FaChevronRight className="ml-2" />
