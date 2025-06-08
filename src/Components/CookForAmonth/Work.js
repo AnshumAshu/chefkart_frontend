@@ -1,6 +1,15 @@
+// Work.jsx
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 const Work = () => {
+  const navigate = useNavigate();
+
+  const handleBookingClick = () => {
+    navigate("/booking");
+  };
+
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -17,7 +26,7 @@ const Work = () => {
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
                   src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/Register_on_app_4372ed1276.svg"
                 />
-                <FaArrowRight className="absolute top-1/2  left-72 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
+                <FaArrowRight className="absolute top-1/2 left-72 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
                     Register on app
@@ -57,7 +66,7 @@ const Work = () => {
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
                   src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/make_payment_50309d2915.svg"
                 />
-                <FaArrowRight className="absolute top-1/2 left-64   ml-11 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
+                <FaArrowRight className="absolute top-1/2 left-64 ml-11 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
                     Fill requirements & pay
@@ -88,7 +97,10 @@ const Work = () => {
                   </p>
                 </div>
               </div>
-              <button className="bg-white text-orange-500 text-md font-bold w-32 rounded-lg border-2 border-orange-400 h-12">
+              <button
+                onClick={handleBookingClick}
+                className="bg-white text-orange-500 text-md font-bold w-32 rounded-lg border-2 border-orange-400 h-12 mt-4"
+              >
                 Book Now
               </button>
             </div>

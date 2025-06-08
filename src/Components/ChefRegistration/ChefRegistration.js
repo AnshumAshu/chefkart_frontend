@@ -15,7 +15,7 @@ const ChefRegistration = () => {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "marketdata");
-    const response = await axios.post("https://api.cloudinary.com/v1_1/de4ks8mkh/image/upload", formData);
+    const response = await axios.post("https://api.cloudinary.com/v1_1/dabrh3qxm/image/upload", formData);
     return response.data.secure_url;
   };
 
@@ -64,7 +64,7 @@ const ChefRegistration = () => {
 
       setLoading(true);
       console.log("Submitting values:", values); // Debug log
-      await axios.post("http://localhost:8000/chef/create", values);
+      await axios.post("http://localhost:8000/chef/createChef", values);
       toast.success("Chef has registered successfully!");
       resetForm();
     } catch (error) {

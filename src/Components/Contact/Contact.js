@@ -1,13 +1,68 @@
+import React, { useState } from "react";
 import ContactLower from "./ContactLower";
 
 const Contact = () => {
+  // Form state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "United States",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(null); // success or error message
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Handle form submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(null);
+
+    try {
+      const res = await fetch("http://localhost:8000/contact/createContact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus({ type: "success", message: data.message || "Message sent!" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          city: "United States",
+          message: "",
+        });
+      } else {
+        setStatus({ type: "error", message: data.message || "Failed to send message." });
+      }
+    } catch (error) {
+      setStatus({ type: "error", message: "Something went wrong." });
+    }
+  };
+
   return (
     <div>
-      <section className="text-gray-600 body-font relative" style={{
-      backgroundImage: `url('https://t4.ftcdn.net/jpg/02/76/53/99/240_F_276539931_BDwFEnJTkSMB7XhdvSGmXAabtL4MN3uP.jpg')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }} >
+      <section
+        className="text-gray-600 body-font relative"
+        style={{
+          backgroundImage:
+            "url('https://t4.ftcdn.net/jpg/02/76/53/99/240_F_276539931_BDwFEnJTkSMB7XhdvSGmXAabtL4MN3uP.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="container px-5 py-12 mx-auto flex lg:flex-nowrap flex-wrap">
           {/* Left Section: Map and Address */}
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-6 flex items-end justify-start relative">
@@ -55,7 +110,18 @@ const Contact = () => {
             <p className="leading-relaxed text-gray-700 text-center mb-6 text-lg">
               Fill out the form & get in touch
             </p>
-            <form>
+
+            {status && (
+              <div
+                className={`mb-4 text-center font-semibold ${
+                  status.type === "success" ? "text-green-600" : "text-red-600"
+                }`}
+              >
+                {status.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-gray-600">
                   Name
@@ -65,7 +131,10 @@ const Contact = () => {
                   id="name"
                   name="name"
                   placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -77,7 +146,10 @@ const Contact = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -89,7 +161,10 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -99,7 +174,10 @@ const Contact = () => {
                 <select
                   id="city"
                   name="city"
+                  value={formData.city}
+                  onChange={handleChange}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  required
                 >
                   <option>United States</option>
                   <option>Canada</option>
@@ -124,10 +202,16 @@ const Contact = () => {
                   id="message"
                   name="message"
                   placeholder="Please write your message in detail"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  required
                 ></textarea>
               </div>
-              <button className="text-white bg-orange-500 border-0 mb-4 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg w-full">
+              <button
+                type="submit"
+                className="text-white bg-orange-500 border-0 mb-4 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg w-full"
+              >
                 Submit
               </button>
             </form>

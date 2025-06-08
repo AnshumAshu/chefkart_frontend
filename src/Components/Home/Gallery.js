@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import axios from "axios";
 
 const GalleryAutoSlideZoom = () => {
   const [images, setImages] = useState([]);
@@ -8,31 +7,33 @@ const GalleryAutoSlideZoom = () => {
   const [currentCuisine, setCurrentCuisine] = useState(cuisines[0]);
   const [centerIndex, setCenterIndex] = useState(0);
 
-  // Fetch images from backend
   useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get("http://localhost:8000/food/getall");
-        setImages(response.data || []);
-      } catch (error) {
-        console.error("Error fetching food images:", error);
-      }
-    };
-
-    fetchImages();
-  }, []);
-
-  // Rotate cuisines every 2 seconds
-  useEffect(() => {
+    // Auto-rotate cuisines
     const interval = setInterval(() => {
-      setCurrentCuisine((prevCuisine) => {
-        const currentIndex = cuisines.indexOf(prevCuisine);
+      setCurrentCuisine((prev) => {
+        const currentIndex = cuisines.indexOf(prev);
         const nextIndex = (currentIndex + 1) % cuisines.length;
         return cuisines[nextIndex];
       });
     }, 2000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Fetch images from API
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/gallery/get");
+        const data = await response.json();
+        const allImages = data.flatMap(item => item.galleryImages);
+        setImages(allImages);
+      } catch (error) {
+        console.error("Error fetching gallery images:", error);
+      }
+    };
+
+    fetchImages();
   }, []);
 
   const settings = {
@@ -56,7 +57,7 @@ const GalleryAutoSlideZoom = () => {
   };
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-black py-12">
       <div className="container mx-auto max-w-7xl px-5">
         <h1 className="text-5xl text-gray-700 font-bold mb-8 text-center">
           Craving{" "}
@@ -64,23 +65,30 @@ const GalleryAutoSlideZoom = () => {
           food? Our Multi-Cuisine Experts <br /> Have Got You!
         </h1>
 
-        <Slider {...settings}>
-          {images.map((item, index) => (
-            <div key={item._id} className="px-20 mt-20 h-96 w-96">
-              <div
-                className={`group transition-transform duration-500 ease-in-out ${
-                  index === centerIndex ? "scale-150" : "scale-90"
-                }`}
-              >
-                <img
-                  src={item.image}
-                  alt={`Food ${index}`}
-                  className="object-cover w-full h-full rounded-2xl"
-                />
+        {/* Image Slider */}
+        {images.length > 0 ? (
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index} className="px-20 mt-20 h-96 w-96">
+                <div
+                  className={`group transition-transform duration-500 ease-in-out ${
+                    index === centerIndex ? "scale-150" : "scale-90"
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`Slide ${index}`}
+                    width="1200"
+                    height="1200"
+                    className="rounded-lg object-cover"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        ) : (
+          <p className="text-center text-white">Loading images...</p>
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
 
 const Lower2 = () => {
+  const navigate = useNavigate(); // ✅ Initialize navigation
+
+  const handleBookingClick = () => {
+    navigate('/booking'); // ✅ Navigate to booking page
+  };
+
   return (
     <div>
       <section className="text-gray-900 bg-[#f1f1f1] body-font overflow-hidden">
@@ -21,7 +28,10 @@ const Lower2 = () => {
                 No time to cook? ChefKart Got You Covered!!
               </h1>
               <h2 className="text-sm text-black font-bold mt-4">Get a professional cook within 60 minutes</h2>
-              <button className="flex mx-auto lg:mx-0 text-white mt-6 text-xl bg-black border-0 py-2 px-6 rounded-lg hover:bg-gray-800 transition">
+              <button 
+                onClick={handleBookingClick} // ✅ Add click handler
+                className="flex mx-auto lg:mx-0 text-white mt-6 text-xl bg-black border-0 py-2 px-6 rounded-lg hover:bg-gray-800 transition"
+              >
                 Book Now
               </button>
             </div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Priceing = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <section className="text-white bg-gray-500 body-font overflow-hidden">
@@ -46,10 +48,14 @@ const Priceing = () => {
                 ))}
                 <p className="text-white">Starting from</p>
                 <p className="mb-1 text-white">₹2000/visit</p>
-                <button className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
+                <button 
+                onClick={() => navigate("/booking")}
+                className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
                   Book Now
                 </button>
-                <button className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
+                <button 
+                onClick={() => navigate("/chef-for-party")}
+                className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
                   Know More
                 </button>
               </div>
@@ -58,16 +64,16 @@ const Priceing = () => {
             {/* Card 2 (identical) */}
             <div className="p-4 w-full bg-green-800 md:w-1/2 xl:w-1/4">
               <div className="h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden">
-                <h2 className="text-2xl tracking-widest mb-1 font-bold">Chef for Party</h2>
+                <h2 className="text-2xl tracking-widest mb-1 font-bold">Chefit: One-time cook</h2>
                 <h1 className="text-lg pb-4 mb-4 border-b border-gray-200 leading-none">
-                  Professional party chefs to elevate your party experience
+                  Get a professional cook for one-time within 60 minutes.
                 </h1>
                 {[
-                  "Multi-Cuisine Professionals",
-                  "Customisable Menu",
-                  "Prompt Service",
-                  "Bartenders, Waiters, etc.",
-                  "Available in Delhi NCR, Bengaluru and Mumbai",
+                  "Trained & Verified Cooks",
+                  "Healthy & Hygienic Food",
+                  "Tailored to Your Taste",
+                  "Quick Servvailable inice",
+                  "Available only in Gurugram",
                 ].map((text, index) => (
                   <p className="flex items-center mb-2" key={index}>
                     <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-orange-500 text-white rounded-full flex-shrink-0">
@@ -88,10 +94,14 @@ const Priceing = () => {
                 ))}
                 <p className="text-white">Starting from</p>
                 <p className="mb-1 text-white">₹2000/visit</p>
-                <button className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
+                <button
+                onClick={() => navigate("/booking")}
+                 className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
                   Book Now
                 </button>
-                <button className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
+                <button 
+                onClick={() => navigate("/one-time-cook")}
+                className="text-center mt-5 text-white bg-gray-400 border-0 py-2 px-4 w-full hover:bg-orange-500 rounded">
                   Know More
                 </button>
               </div>

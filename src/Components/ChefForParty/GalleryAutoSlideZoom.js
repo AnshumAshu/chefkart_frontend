@@ -2,28 +2,38 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
 const GalleryAutoSlideZoom = () => {
-  const images = [
-    "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FItalian_168d980a5a.webp&w=1920&q=75",
-    "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FMexican_9e7092cb2b.webp&w=1920&q=75",
-    "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2Ftop_view_delicious_noodles_concept_9283eeb6c4.webp&w=1920&q=75",
-    "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FMexican_9e7092cb2b.webp&w=1920&q=75",
-  
-  ];
-
+  const [images, setImages] = useState([]);
   const cuisines = ["Indian", "Chinese", "Mexican", "Italian"];
   const [currentCuisine, setCurrentCuisine] = useState(cuisines[0]);
-  const [centerIndex, setCenterIndex] = useState(0); // To track the centered slide
+  const [centerIndex, setCenterIndex] = useState(0);
 
   useEffect(() => {
+    // Auto-rotate cuisines
     const interval = setInterval(() => {
-      setCurrentCuisine((prevCuisine) => {
-        const currentIndex = cuisines.indexOf(prevCuisine);
+      setCurrentCuisine((prev) => {
+        const currentIndex = cuisines.indexOf(prev);
         const nextIndex = (currentIndex + 1) % cuisines.length;
         return cuisines[nextIndex];
       });
     }, 2000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Fetch images from API
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/gallery/get");
+        const data = await response.json();
+        const allImages = data.flatMap(item => item.galleryImages);
+        setImages(allImages);
+      } catch (error) {
+        console.error("Error fetching gallery images:", error);
+      }
+    };
+
+    fetchImages();
   }, []);
 
   const settings = {
@@ -35,7 +45,7 @@ const GalleryAutoSlideZoom = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     focusOnSelect: true,
-    afterChange: (current) => setCenterIndex(current), // Update the center index
+    afterChange: (current) => setCenterIndex(current),
     responsive: [
       {
         breakpoint: 768,
@@ -49,31 +59,36 @@ const GalleryAutoSlideZoom = () => {
   return (
     <div className="bg-black py-12">
       <div className="container mx-auto max-w-7xl px-5">
-        <h1 className="text-5xl  text-gray-700 font-bold mb-8 text-center">
+        <h1 className="text-5xl text-gray-700 font-bold mb-8 text-center">
           Craving{" "}
           <span className="text-orange-500 font-bold">{currentCuisine}</span>{" "}
           food? Our Multi-Cuisine Experts <br /> Have Got You!
         </h1>
 
         {/* Image Slider */}
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className="px-20  mt-20 h-96 6 w-96">
-              <div
-                className={`group transition-transform duration-500 ease-in-out ${
-                  index === centerIndex ? "scale-150" : "scale-90"
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`Slide ${index}`}
-                  width="1200px" 
-                  height="1200px"
-                />
+        {images.length > 0 ? (
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index} className="px-20 mt-20 h-96 w-96">
+                <div
+                  className={`group transition-transform duration-500 ease-in-out ${
+                    index === centerIndex ? "scale-150" : "scale-90"
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`Slide ${index}`}
+                    width="1200"
+                    height="1200"
+                    className="rounded-lg object-cover"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        ) : (
+          <p className="text-center text-white">Loading images...</p>
+        )}
       </div>
     </div>
   );

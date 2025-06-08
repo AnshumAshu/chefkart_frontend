@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FloatingBanner = () => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -34,7 +36,9 @@ const FloatingBanner = () => {
         <p className="text-gray-700 font-medium mt-14">
         Hosting a party? Book your Chefit now and delight your guests with an in-home cooked meal!!
         </p>
-        <button className="bg-orange-500 mt-10 text-white px-6 py-2 rounded-lg font-bold">
+        <button 
+        onClick={() => navigate("/booking")}
+        className="bg-orange-500 mt-10 text-white px-6 py-2 rounded-lg font-bold">
           Book Now
         </button>
       </div>

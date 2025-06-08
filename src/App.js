@@ -15,8 +15,11 @@ import Invester from "./Components/InvestorRelation/Invester";
 import Career from "./Components/Career/career";
 import Blog from "./Components/Blog/Blog";
 import ChefRegistration from "./Components/ChefRegistration/ChefRegistration";
-import ChefDetails from "./Components/ChefSearch"
-import ChefDirectory from "./Components/ChefDetailPage"
+import ChefDirectory from "./Components/ChefSearch"
+import  ChefDetails from "./Components/ChefDetailPage"
+import BookNow from './Components/BookNow/Booknow';
+
+
 
 
 
@@ -29,18 +32,22 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="/Blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="chef-for-party" element={<Party />} />
+        <Route path="/join-chefkart" element={<ChefConnection />} />
         <Route path="cook-for-month" element={<Month />} />
         <Route path="one-time-cook" element={<OneTime />} />
-        <Route path="/join-chefkart" element={<ChefConnection />} />
+        <Route path="chef-for-party" element={<Party />} />
         <Route path="/testimonial" element={<Test />} />
-        <Route path="/investor-relation" element={<Invester />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/Blog" element={<Blog />} />
+        <Route path="/investor-relation" element={<Invester />} />
+        
+        <Route path="/chef-search" element={< ChefDirectory/>} /> 
+        <Route path="/chef/:id" element={< ChefDetails/>} /> 
         <Route path="/register-chef" element={<ChefRegistration />} />
-        <Route path="/chef-search" element={< ChefDetails/>} /> 
-        <Route path="/" element={< ChefDirectory/>} /> 
+        <Route path="/booking" element={<BookNow />} />
+
+        
       </Routes>
       <Footer />
     </>
@@ -48,3 +55,5 @@ const App = () => {
 };
 
 export default App;
+
+
