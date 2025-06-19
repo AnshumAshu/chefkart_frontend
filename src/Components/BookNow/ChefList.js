@@ -9,7 +9,7 @@ export default function ChefList({ onContinue, onBack }) {
   const [selectedSlot, setSelectedSlot] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/chef/get")
+    fetch("https://chefkart-backend.onrender.com/chef/get")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch chefs");
         return res.json();
@@ -19,7 +19,7 @@ export default function ChefList({ onContinue, onBack }) {
         const detailedChefs = await Promise.all(
           data.data.map(async (chef) => {
             try {
-              const res = await fetch(`http://localhost:8000/chef/get/${chef._id}`);
+              const res = await fetch(`https://chefkart-backend.onrender.com/chef/get/${chef._id}`);
               const details = await res.json();
               return { ...chef, availability: details.data.availability || [] };
             } catch (err) {

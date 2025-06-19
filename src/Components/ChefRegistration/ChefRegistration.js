@@ -64,7 +64,7 @@ const ChefRegistration = () => {
 
       setLoading(true);
       console.log("Submitting values:", values); // Debug log
-      await axios.post("http://localhost:8000/chef/createChef", values);
+      await axios.post("https://chefkart-backend.onrender.com/chef/createChef", values);
       toast.success("Chef has registered successfully!");
       resetForm();
     } catch (error) {

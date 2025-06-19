@@ -15,7 +15,7 @@ const Carousel = () => {
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const response = await fetch("http://localhost:8000/crousel/get");
+        const response = await fetch("https://chefkart-backend.onrender.com/crousel/get");
         const data = await response.json();
         setSlides(data);
       } catch (error) {
@@ -43,7 +43,7 @@ const Carousel = () => {
 
   const handleSendOTP = async () => {
     try {
-      await fetch("http://localhost:8000/otp/send-otp", {
+      await fetch("https://chefkart-backend.onrender.com/otp/send-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone }),
@@ -56,7 +56,7 @@ const Carousel = () => {
 
   const handleVerifyOTP = async () => {
     try {
-      const res = await fetch("http://localhost:8000/otp/verify-otp", {
+      const res = await fetch("https://chefkart-backend.onrender.com/otp/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, otp }),

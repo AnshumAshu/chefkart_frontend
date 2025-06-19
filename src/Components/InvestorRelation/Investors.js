@@ -76,7 +76,7 @@ const InvestorsCarousel = () => {
   useEffect(() => {
     const fetchInvestors = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/investor/getinvestor');
+        const response = await axios.get('https://chefkart-backend.onrender.com/investor/getinvestor');
         setInvestors(response.data);
       } catch (error) {
         console.error('Error fetching investor data:', error);

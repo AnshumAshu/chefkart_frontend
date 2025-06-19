@@ -24,7 +24,7 @@ const GalleryAutoSlideZoom = () => {
     // Fetch images from API
     const fetchImages = async () => {
       try {
-        const response = await fetch("http://localhost:8000/gallery/get");
+        const response = await fetch("https://chefkart-backend.onrender.com/gallery/get");
         const data = await response.json();
         const allImages = data.flatMap(item => item.galleryImages);
         setImages(allImages);

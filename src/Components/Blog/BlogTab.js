@@ -33,7 +33,7 @@ const TabSwitch = () => {
   const fetchBlogDetails = async (id) => {
     setModalLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8000/blog/get/${id}`);
+      const response = await axios.get(`https://chefkart-backend.onrender.com/blog/get/${id}`);
       setSelectedBlog(response.data);
       setModalOpen(true);
     } catch (err) {

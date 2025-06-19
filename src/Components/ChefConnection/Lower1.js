@@ -10,7 +10,7 @@ const Lowe1 = () => {
 
   const handleSendOTP = async () => {
     try {
-      await fetch("http://localhost:8000/otp/send-otp", {
+      await fetch("https://chefkart-backend.onrender.com/otp/send-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone }),
@@ -23,7 +23,7 @@ const Lowe1 = () => {
 
   const handleVerifyOTP = async () => {
     try {
-      const res = await fetch("http://localhost:8000/otp/verify-otp", {
+      const res = await fetch("https://chefkart-backend.onrender.com/otp/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, otp }),

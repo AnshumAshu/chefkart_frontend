@@ -7,7 +7,7 @@ const Cater = () => {
   useEffect(() => {
     const fetchJoins = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/join/get");
+        const response = await axios.get("https://chefkart-backend.onrender.com/join/get");
         setJoins(response.data);
       } catch (error) {
         console.error("Error fetching joins:", error);

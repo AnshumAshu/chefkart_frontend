@@ -25,7 +25,7 @@ const Contact = () => {
     setStatus(null);
 
     try {
-      const res = await fetch("http://localhost:8000/contact/createContact", {
+      const res = await fetch("https://chefkart-backend.onrender.com/contact/createContact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

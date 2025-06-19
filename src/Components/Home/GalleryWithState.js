@@ -11,7 +11,7 @@ const GalleryWithState = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/foodGall/getall");
+        const response = await axios.get("https://chefkart-backend.onrender.com/foodGall/getall");
         setImages(response.data); // Store API image data
       } catch (error) {
         console.error("Failed to fetch gallery images:", error);

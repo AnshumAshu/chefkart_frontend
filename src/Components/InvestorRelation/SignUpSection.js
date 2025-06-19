@@ -112,7 +112,7 @@ const SignupSection = () => {
     setResponseMsg('');
 
     try {
-      const res = await fetch('http://localhost:8000/investContact/create', {
+      const res = await fetch('https://chefkart-backend.onrender.com/investContact/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

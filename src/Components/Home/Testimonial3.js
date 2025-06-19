@@ -76,7 +76,7 @@ const Testimonial3 = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/Testimonial/get');
+        const response = await axios.get('https://chefkart-backend.onrender.com/Testimonial/get');
         setTestimonials(response.data.data);
       } catch (error) {
         console.error('Error fetching testimonials:', error);
