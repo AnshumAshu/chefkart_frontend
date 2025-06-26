@@ -14,7 +14,7 @@ const TabSwitch = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/blog/getAll");
+        const response = await axios.get("https://chefkart-backend.onrender.com/blog/getAll");
         const blogData = response.data;
         setData(blogData);
         if (blogData.length > 0) {
