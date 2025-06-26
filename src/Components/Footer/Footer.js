@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Link to="#" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <img src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FLogo_black_9e78b44631.webp&w=1920&q=75" alt="ChefKart Logo" />
+              <img src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FLogo_black_9e78b44631.webp&w=1920&q=75" alt="ChefKart Logo" />
             </Link>
             <p className="mt-2 text-black font-bold text-center">Get The App Now</p>
             <div className="flex flex-row space-x-7 mt-5">
-              <img src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/app_store_e12d7f52d9.svg" alt="App Store" />
-              <img src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/google_play_bb87168764.svg" alt="Google Play" />
+              <img src="https://storage.googleapis.com/chefkart-strapi-media/app_store_e12d7f52d9.svg" alt="App Store" />
+              <img src="https://storage.googleapis.com/chefkart-strapi-media/google_play_bb87168764.svg" alt="Google Play" />
             </div>
           </div>
 
