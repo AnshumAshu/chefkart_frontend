@@ -7,7 +7,7 @@ const cardData = [
    
     title: "30 Days of Assured Service",
     description:"Free substitute cook or service extension in case of leaves.",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/30_days_assured_1aa2f3eb64.svg",
+    image: "https://thechefkart.com/default_cook_image.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const cardData = [
     id: 3,
     title: "Effortless Replacements",
     description:"One free, no-questions-asked cook replacement..",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/effortless_ae968a4dea.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/professional_cooks_ec13508556.svg",
   },
   {
     id: 4,

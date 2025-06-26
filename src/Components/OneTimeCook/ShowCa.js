@@ -19,7 +19,7 @@ const cardData = [
     id: 3,
     title: "Trained & Verified Cooks",
     description:"Professionally trained & background verified cooks for quality service.",
-    image: "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FGroup_625783_1_16e923de80.png&w=1920&q=75",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/professional_cooks_ec13508556.svg",
   },
   
   {
