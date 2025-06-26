@@ -19,13 +19,13 @@ const cardData = [
     id: 3,
     title: "Effortless Replacements",
     description:"One free, no-questions-asked cook replacement..",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/effortless_ae968a4dea.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/tailored_to_taste_33cb681b66.svg",
   },
   {
     id: 4,
     title: "Quick Service",
     description:"Find a skilled cook for your kitchen in as little as 24 hours.",
-    image: "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2Ftime_management_4_2_20dc3c1815.png&w=1920&q=75",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/timely_service_3a6f9d9ebe.svg",
   },
 ];
 
