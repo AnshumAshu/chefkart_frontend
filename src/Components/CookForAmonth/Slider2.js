@@ -8,7 +8,7 @@ const Carousel1 = () => {
       description:
         "Professional & background verified cook for a month for you to enjoy home-cooked food every day.",
       bgImage:
-        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FJoin_as_chef_hero_banner_01_f31e87e92e.webp&w=1920&q=75",
+        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FChefit_Hero_banner_f573fdf12c.webp&w=1920&q=75",
       action: "Get Started",
     },
     {
@@ -16,7 +16,7 @@ const Carousel1 = () => {
       description:
         "Professional & background verified cook for a month for you to enjoy home-cooked food every day.",
       bgImage:
-        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FJoin_as_chef_hero_banner_01_f31e87e92e.webp&w=1920&q=75",
+        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FWebsite_banner_01_web_1_40ea9de1d0.webp&w=1920&q=75",
       action: "Get Started",
     },
     {
@@ -24,7 +24,7 @@ const Carousel1 = () => {
       description:
         "Professional & background verified cook for a month for you to enjoy home-cooked food every day.",
       bgImage:
-        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FJoin_as_chef_hero_banner_01_f31e87e92e.webp&w=1920&q=75",
+        "https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FJoin_as_chef_hero_banner_03_e679e84c56.webp&w=1920&q=75",
       action: "Get Started",
     },
   ]);
