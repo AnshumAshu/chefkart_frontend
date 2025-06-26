@@ -8,7 +8,7 @@ const SkillIndiaSection = () => {
           {/* Skill India Logo */}
           <div className="flex flex-col items-center">
             <img
-              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FScreenshot_2023_07_10_at_4_52_1_658c10251b.png&w=256&q=75g"
+              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FSkill_India_Preview_removebg_preview_1_03db4e9828.png&w=384&q=75"
               alt="Skill India"
               className="h-96  w-auto mb-4"
             />
@@ -17,7 +17,7 @@ const SkillIndiaSection = () => {
           {/* THSC Logo */}
           <div className="flex flex-col items-center">
             <img
-              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FSkill_India_Preview_removebg_preview_1_03db4e9828.png&w=256&q=75"
+              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FScreenshot_2023_07_10_at_4_52_1_658c10251b.png&w=384&q=75"
               alt="THSC Logo"
               className="h-96 w-auto mb-4"
             />

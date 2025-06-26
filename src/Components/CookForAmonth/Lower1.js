@@ -31,7 +31,7 @@ const Lower2 = () => {
             <img
               className="object-cover object-center rounded"
               alt="hero"
-              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FSubscription_banner_02_1_f9ff5bf256.webp&w=1920&q=75"
+              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2Fcook_1_3efd7cf8b6_71550458c9.webp&w=1920&q=75"
             />
           </div>
         </div>

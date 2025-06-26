@@ -10,7 +10,7 @@ const Lower1 = () => {
             <img
               alt="ecommerce"
               className="w-full lg:w-1/2 h-64 lg:h-auto object-cover object-center rounded-md"
-              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2FBest_cooks_to_serve_you_3876478f4c.webp&w=1920&q=75"
+              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2FSign_up_d1762e3ca9.webp&w=1920&q=75"
             />
 
             {/* Text Section */}

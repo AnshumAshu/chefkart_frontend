@@ -9,7 +9,7 @@ const GalleryWithState = () => {
 
   // Fetch images from API
   useEffect(() => {
-    axios.get("http://localhost:8000/foodGall/getAll")
+    axios.get("https://chefkart-backend.onrender.com/foodGall/getAll")
       .then((res) => {
         const urls = res.data.map(item => item.image);
         setImages(urls);

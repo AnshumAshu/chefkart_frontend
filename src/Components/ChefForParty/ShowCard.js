@@ -7,25 +7,25 @@ const cardData = [
    
     title: "Multi-Cuisine Professionals",
     description:"Professional party chefs to ensure a diverse & exquisite dining experience.",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/healthy_hygienic_a9878d9090.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/healthy_hygienic_a9878d9090.svg",
   },
   {
     id: 2,
     title: "Prompt Service",
     description:"Swift service to ensure that your party kicks off as planned",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/timely_service_3a6f9d9ebe.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/timely_service_3a6f9d9ebe.svg",
   },
   {
     id: 3,
     title: "Customisable menu",
     description:"Food from around the world to make your event the talk of the town.",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/easy_booking_92fea7ca01.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/easy_booking_92fea7ca01.svg",
   },
   {
     id: 4,
     title: "Bartenders, Waiters, etc.",
     description:"Expert bartenders & waiters to leave your guests in awe",
-    image: "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/bartenders_48bb601645.svg",
+    image: "https://storage.googleapis.com/chefkart-strapi-media/bartenders_48bb601645.svg",
   },
 ];
 
