@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 
 const VideoGallery = () => {
   const videos = [
-    "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/v4_015b8116b1.mp4", // Replace with actual video URLs
-    "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/v3_8de4acd8d1.mp4",
-    "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/v1_1_ce597e37d8.mp4",
-    "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/v6_b86f7e540a.mp4",
-    "https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/v5_068121efcb.mp4",
+    "https://storage.googleapis.com/chefkart-strapi-media/v4_015b8116b1.mp4", // Replace with actual video URLs
+    "https://storage.googleapis.com/chefkart-strapi-media/v3_8de4acd8d1.mp4",
+    "https://storage.googleapis.com/chefkart-strapi-media/v1_1_ce597e37d8.mp4",
+    "https://storage.googleapis.com/chefkart-strapi-media/v6_b86f7e540a.mp4",
+    "https://storage.googleapis.com/chefkart-strapi-media/v5_068121efcb.mp4",
   ];
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Mobile screen detection

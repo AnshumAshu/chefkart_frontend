@@ -11,7 +11,7 @@ const Heart2 = () => {
               className="object-cover object-center w-full h-full"
               controls
               width="700px"
-              src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/cook_vid_low_quality_8_mb_1249700be8.mp4"
+              src="https://storage.googleapis.com/chefkart-strapi-media/cook_vid_low_quality_8_mb_1249700be8.mp4"
             />
           </div>
 

@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <video
             className="object-cover object-center rounded"
-            src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/website_cook_loop_4e9912d5f5.mp4"
+            src="https://storage.googleapis.com/chefkart-strapi-media/website_cook_loop_4e9912d5f5.mp4"
             controls
             autoPlay
             loop

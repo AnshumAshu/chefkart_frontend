@@ -67,7 +67,7 @@ const Contacts = () => {
           <div className="lg:w-2/3 md:w-1/2 w-full bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <img
               className="absolute inset-0 w-full h-full object-cover object-center"
-              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fchefkart-strapi-media.s3.ap-south-1.amazonaws.com%2Fi_Stock_495494292_1_6e708dc61d_37ec0073ce.webp&w=1920&q=75"
+              src="https://thechefkart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fchefkart-strapi-media%2Fi_Stock_495494292_1_6e708dc61d_37ec0073ce.webp&w=1920&q=75"
               alt="Map of İzmir"
             />
           </div>

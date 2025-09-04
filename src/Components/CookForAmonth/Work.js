@@ -24,7 +24,7 @@ const Work = () => {
                 <img
                   alt="Register"
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
-                  src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/Register_on_app_4372ed1276.svg"
+                  src="https://storage.googleapis.com/chefkart-strapi-media/Register_on_app_4372ed1276.svg"
                 />
                 <FaArrowRight className="absolute top-1/2 left-72 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">
@@ -44,7 +44,7 @@ const Work = () => {
                 <img
                   alt="Select Service"
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
-                  src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/select_your_service_7ba59dddd5.svg"
+                  src="https://storage.googleapis.com/chefkart-strapi-media/select_your_service_7ba59dddd5.svg"
                 />
                 <FaArrowRight className="absolute top-1/2 left-72 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">
@@ -64,7 +64,7 @@ const Work = () => {
                 <img
                   alt="Payment"
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
-                  src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/make_payment_50309d2915.svg"
+                  src="https://storage.googleapis.com/chefkart-strapi-media/make_payment_50309d2915.svg"
                 />
                 <FaArrowRight className="absolute top-1/2 left-64 ml-11 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">
@@ -84,7 +84,7 @@ const Work = () => {
                 <img
                   alt="Get a Cook"
                   className="flex-shrink-0 rounded-lg w-full h-72 object-cover object-center mb-4"
-                  src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/Get_a_cook_b0e201f46a.svg"
+                  src="https://storage.googleapis.com/chefkart-strapi-media/Get_a_cook_b0e201f46a.svg"
                 />
                 <FaArrowRight className="absolute top-1/2 transform -translate-y-1/2 text-orange-500 w-8 h-8" />
                 <div className="w-full">

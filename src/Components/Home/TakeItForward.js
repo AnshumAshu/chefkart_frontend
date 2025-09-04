@@ -7,7 +7,7 @@ const TakeItForward = () => {
         {/* Video Section */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <video
-            src="https://chefkart-strapi-media.s3.ap-south-1.amazonaws.com/mobile_video_be902dfffb.mp4?updated_at=2024-01-16T05:07:06.659Z" // Replace this with the actual video link
+            src="https://storage.googleapis.com/chefkart-strapi-media/public/AppDemoForWebsite.mp4" // Replace this with the actual video link
             controls
             className="h-96 w-52 rounded-lg shadow-md"
           ></video>
