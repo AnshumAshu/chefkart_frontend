@@ -30,8 +30,18 @@ ChefKart is a **full-stack web platform** that allows users to book professional
 | Tailwind CSS, MUI |            |          | Postman (API Test) |
 | Razorpay          |            |          |                    |
 
-![React](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg) ![Node.js](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg) ![MongoDB](https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg) ![Express](https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg) ![TailwindCSS](https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg) ![MaterialUI](https://v4.mui.com/static/logo.png) ![Postman](https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg) ![Razorpay](https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg) ---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="TailwindCSS" width="60" height="60"/>
+  <img src="https://v4.mui.com/static/logo.png" alt="MaterialUI" width="60" height="60"/>
+  <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="60" height="60"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" alt="Razorpay" width="60" height="60"/>
+</p>
 
+---
 ## 🔧 Installation & Setup
 
 1. Clone the repository:
