@@ -30,16 +30,7 @@ ChefKart is a **full-stack web platform** that allows users to book professional
 | Tailwind CSS, MUI |            |          | Postman (API Test) |
 | Razorpay          |            |          |                    |
 
-![React](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg)
-![Node.js](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg)
-![MongoDB](https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg)
-![Express](https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg)
-![TailwindCSS](https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg)
-![MaterialUI](https://v4.mui.com/static/logo.png)
-![Postman](https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg)
-![Razorpay](https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg)
-
----
+![React](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg) ![Node.js](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg) ![MongoDB](https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg) ![Express](https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg) ![TailwindCSS](https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg) ![MaterialUI](https://v4.mui.com/static/logo.png) ![Postman](https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg) ![Razorpay](https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg) ---
 
 ## 🔧 Installation & Setup
 
