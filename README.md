@@ -1,59 +1,107 @@
-ChefKart
+# 🍳 ChefKart Web Application
 
-    ChefKart is a full-stack web application that allows users to book chefs for different occasions—daily, part-time, or monthly. Users can search for nearby chefs, while chefs can register themselves to be listed on the platform. All content such as images, blog posts, videos, and investor information is managed through an admin dashboard, making the app dynamic and easy to update.
+## 📌 Overview
 
-Features
+ChefKart is a **full-stack web platform** that allows users to book professional chefs for events or monthly services. It provides detailed chef profiles, availability, ratings, and an intuitive booking system. The application includes an **admin dashboard** to manage users, chefs, and bookings efficiently.
 
-    Book a Chef: Hire chefs for parties, events, or regular work.
+![ChefKart Screenshot](./images/home.png)
 
-    Search Chefs Nearby: Find available chefs in your area.
+---
 
-    Chef Registration: Chefs can register themselves, appearing in the “Cook Near Me” section.
+## 🚀 Features
 
-    Content Management Dashboard: Admin can update images, posts, videos, blogs, and investor information.
+* 👨‍🍳 **Book Professional Chefs** for one-time events or recurring services.
+* 📝 **Chef Profiles** with detailed info, ratings, and availability.
+* 📆 **Real-Time Booking Updates** to manage schedules easily.
+* 📊 **Admin Dashboard** for chefs, users, and bookings management.
+* 💳 **Razorpay Integration** for seamless payments.
+* 🌐 **Responsive UI** built with **Tailwind CSS**.
+* 🔗 **RESTful APIs** tested with **Postman**.
+* ⚡ **Scalable Backend** hosted on **Render** and **Frontend** on **Netlify**.
 
-    Dynamic Sections: About, Blog, Investor, and Contact pages display content managed through the dashboard.
+---
 
-    Responsive UI: Built with React JS for smooth user experience.
+## 🛠️ Tech Stack
 
-    Tech Stack
+| Frontend          | Backend    | Database | Tools & Deployment |
+| ----------------- | ---------- | -------- | ------------------ |
+| React.js          | Node.js    | MongoDB  | Render (Backend)   |
+| HTML, CSS         | Express.js |          | Netlify (Frontend) |
+| Tailwind CSS, MUI |            |          | Postman (API Test) |
+| Razorpay          |            |          |                    |
 
-    Frontend: React JS
+![React](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg)
+![Node.js](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg)
+![MongoDB](https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg)
+![Express](https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg)
+![TailwindCSS](https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg)
+![MaterialUI](https://v4.mui.com/static/logo.png)
+![Postman](https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg)
+![Razorpay](https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg)
 
-    Backend: Node.js + Express.js
+---
 
-    Database: MongoDB
+## 🔧 Installation & Setup
 
-    Cloud Storage: Cloudinary (for images and videos)
+1. Clone the repository:
 
-    Authentication: JWT
+```bash
+git clone https://github.com/AnshumAshu/chefkart.git
+cd chefkart
+```
 
-    Payment Gateway: Razorpay
+2. Install dependencies for both frontend and backend:
 
-    Other Packages: bcryptjs, cors, dotenv, multer, multer-storage-cloudinary, morgan, crypto, http-errors
+```bash
+cd client
+npm install
+cd ../server
+npm install
+```
 
-    Styling: CSS / Tailwind (specify what you used)
+3. Start the development servers:
 
-    Deployment: Vercel (frontend)
+```bash
+# In one terminal
+dcd server
+npm start
 
-Setup Instructions
-Frontend
+# In another terminal
+cd client
+npm start
+```
 
-    Clone the repository:
+4. Access the app at `http://localhost:3000`.
 
-        git clone <frontend-repo-link>
+---
 
+## 📸 Screenshots
 
-    Navigate into the project directory:
+| Services                           | Chef Profile                              |
+| ----------------------------------- | ----------------------------------------- |
+| ![Home](./images/services.png.png) | ![Profile](./images/register.png) |
 
-        cd chefkart-frontend
+| Booking Page                              | Booking Page                                  |
+| ----------------------------------------- | --------------------------------------------- |
+| ![Booking](./images/time.png) | ![Dashboard](./images/chef.png) |
 
+| Blog Page                           | Investors Profile                              |
+| ----------------------------------- | ----------------------------------------- |
+| ![Home](./images/blog.png) | ![Profile](./images/stake.png) |
 
-    Install dependencies:
+| Contact Page                              | Payment Dashboard                               |
+| ----------------------------------------- | --------------------------------------------- |
+| ![Booking](./images/contact.png) | ![Dashboard](./images/razerpay.png) |
 
-        npm install
+---
 
+## 🌐 Deployment
 
-    Run the development server:
+* **Frontend:** Hosted on [Netlify](https://www.netlify.com/)
+* **Backend:** Hosted on [Render](https://render.com/)
 
-        npm start
+---
+
+## 📬 Contact
+
+💡 Have questions or feedback? Reach out via email: **[anshumashu2002@gmail.com](mailto:anshumashu2002@gmail.com)**
